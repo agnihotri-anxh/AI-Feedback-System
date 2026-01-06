@@ -1,4 +1,8 @@
-const API_URL = "http://localhost:8000"; // Update this for production deployment
+const RENDER_BACKEND_URL = "https://YOUR-BACKEND-SERVICE-NAME.onrender.com";
+
+const API_URL = (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1')
+    ? "http://localhost:8000"
+    : RENDER_BACKEND_URL;
 
 document.getElementById('feedbackForm').addEventListener('submit', async (e) => {
     e.preventDefault();
@@ -8,7 +12,6 @@ document.getElementById('feedbackForm').addEventListener('submit', async (e) => 
     const responseArea = document.getElementById('responseArea');
     const aiReplyText = document.getElementById('aiReplyText');
 
-    // Get form data
     const formData = new FormData(e.target);
     const rating = formData.get('rating');
     const review = formData.get('review');
@@ -19,7 +22,6 @@ document.getElementById('feedbackForm').addEventListener('submit', async (e) => 
         return;
     }
 
-    // UI Updates
     submitBtn.disabled = true;
     submitBtn.textContent = "Analyzing...";
     statusMsg.textContent = "";
@@ -43,13 +45,10 @@ document.getElementById('feedbackForm').addEventListener('submit', async (e) => 
 
         const data = await response.json();
 
-        // Success State
         aiReplyText.textContent = data.user_reply;
         responseArea.classList.add('visible');
         statusMsg.textContent = "Feedback submitted successfully!";
         statusMsg.className = "status-msg success";
-
-        // Reset form slightly but keep success message
         e.target.reset();
 
     } catch (error) {
