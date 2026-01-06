@@ -1,4 +1,4 @@
-const RENDER_BACKEND_URL = "https://YOUR-BACKEND-SERVICE-NAME.onrender.com";
+const RENDER_BACKEND_URL = "https://ai-feedback-system-urv6.onrender.com";
 
 const API_URL = (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1')
     ? "http://localhost:8000"
