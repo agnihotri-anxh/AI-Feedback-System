@@ -2,6 +2,11 @@ from fastapi import FastAPI, Depends, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from sqlalchemy.orm import Session
 from typing import List
+import sys
+import os
+
+# Add current directory to sys.path so we can import sibling files
+sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 
 from database import init_db, get_db, Review
 from schemas import ReviewCreate, SubmitReviewResponse, ReviewResponse, AdminReviewsResponse
