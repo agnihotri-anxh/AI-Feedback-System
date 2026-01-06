@@ -1,4 +1,9 @@
-const API_URL = "http://localhost:8000"; // Update this for production deployment
+// Update this with your Render Backend URL
+const RENDER_BACKEND_URL = "https://ai-feedback-system-urv6.onrender.com";
+
+const API_URL = (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1')
+    ? "http://localhost:8000"
+    : RENDER_BACKEND_URL;
 
 async function fetchReviews() {
     const tbody = document.getElementById('reviewsBody');

@@ -61,9 +61,6 @@ function updateStats(reviews) {
     const avg = reviews.length ? (totalRating / reviews.length).toFixed(1) : 0.0;
     document.getElementById('avgRating').innerText = avg;
 
-    // Pending Actions (Simple heuristic: if action is not "No action" or similar)
-    // In a real app, this would be a flag in the DB.
-    // For now, let's just count all as "active" or maybe simple length.
     document.getElementById('pendingActions').innerText = reviews.length;
 }
 
