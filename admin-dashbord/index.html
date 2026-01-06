@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | Admin View</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="sidebar">
+        <div class="logo">
+            <h2>Admin<span>Panel</span></h2>
+        </div>
+        <nav>
+            <ul>
+                <li class="active"><a href="#">Dashboard</a></li>
+                <li><a href="#">Analytics</a></li>
+                <li><a href="#">Settings</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <main class="main-content">
+        <header>
+            <h1>Overview</h1>
+            <div class="user-profile">
+                <span>Admin User</span>
+                <div class="avatar">A</div>
+            </div>
+        </header>
+
+        <section class="stats-grid">
+            <div class="stat-card">
+                <h3>Total Reviews</h3>
+                <p id="totalReviews">0</p>
+            </div>
+            <div class="stat-card">
+                <h3>Average Rating</h3>
+                <p id="avgRating">0.0</p>
+            </div>
+            <div class="stat-card">
+                <h3>Pending Actions</h3>
+                <p id="pendingActions">0</p>
+            </div>
+        </section>
+
+        <section class="reviews-section">
+            <div class="section-header">
+                <h2>Recent Reviews</h2>
+                <button id="refreshBtn">Refresh Data</button>
+            </div>
+
+            <div class="reviews-grid" id="reviewsGrid">
+                <!-- Reviews will be populated here -->
+                <div class="loading-state">Loading reviews...</div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

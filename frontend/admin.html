@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard | Feedback Analytics</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Specific Admin Tweaks */
+        .rating-badge {
+            font-weight: bold;
+            color: #f59e0b;
+        }
+
+        .action-text {
+            color: #60a5fa;
+            font-weight: 500;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container admin-container">
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+                <h1>Admin Dashboard</h1>
+                <button id="refreshBtn" style="width: auto; background-color: rgba(255,255,255,0.1);">Refresh
+                    Data</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="container admin-container">
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width: 80px;">Rating</th>
+                        <th style="width: 30%;">Review</th>
+                        <th style="width: 30%;">AI Summary</th>
+                        <th>Recommended Action</th>
+                        <th style="width: 150px;">Date</th>
+                    </tr>
+                </thead>
+                <tbody id="reviewsBody">
+                    <tr>
+                        <td colspan="5" style="text-align: center; color: var(--text-muted);">Loading reviews...</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <script src="admin.js"></script>
+</body>
+
+</html>

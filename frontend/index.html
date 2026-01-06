@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Feedback System | Share Your Experience</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <h1>Feedback Portal</h1>
+      <p style="color: var(--text-muted);">We value your opinion. Let AI analyze your feedback instantly.</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="card">
+      <form id="feedbackForm">
+        <div style="margin-bottom: 1rem;">
+          <label>How would you rate your experience?</label>
+          <div class="star-rating">
+            <input type="radio" id="star5" name="rating" value="5" /><label for="star5" title="5 stars">★</label>
+            <input type="radio" id="star4" name="rating" value="4" /><label for="star4" title="4 stars">★</label>
+            <input type="radio" id="star3" name="rating" value="3" /><label for="star3" title="3 stars">★</label>
+            <input type="radio" id="star2" name="rating" value="2" /><label for="star2" title="2 stars">★</label>
+            <input type="radio" id="star1" name="rating" value="1" /><label for="star1" title="1 star">★</label>
+          </div>
+        </div>
+
+        <div>
+          <label for="review">Your Review</label>
+          <textarea id="review" name="review" rows="5" placeholder="Tell us what you liked or how we can improve..."
+            required></textarea>
+        </div>
+
+        <button type="submit" id="submitBtn">
+          Submit Feedback
+        </button>
+        <div id="statusMsg" class="status-msg"></div>
+      </form>
+
+      <div id="responseArea" class="response-area">
+        <div class="ai-badge">✨ AI Response</div>
+        <h2 style="font-size: 1.25rem;">Thanks for sharing!</h2>
+        <p id="aiReplyText" style="color: var(--text-muted);"></p>
+      </div>
+    </div>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+
+</html>

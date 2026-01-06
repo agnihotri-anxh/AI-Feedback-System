@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Share Your Experience | Premium Feedback</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="background-globes">
+        <div class="globe globe-1"></div>
+        <div class="globe globe-2"></div>
+        <div class="globe globe-3"></div>
+    </div>
+
+    <main class="container">
+        <div class="glass-card">
+            <header>
+                <h1>We Value Your Voice</h1>
+                <p>Help us improve by sharing your honest feedback.</p>
+            </header>
+
+            <form id="feedbackForm">
+                <div class="form-group">
+                    <label for="rating">How would you rate your experience?</label>
+                    <div class="star-rating">
+                        <input type="radio" id="star5" name="rating" value="5" /><label for="star5"
+                            title="5 stars"></label>
+                        <input type="radio" id="star4" name="rating" value="4" /><label for="star4"
+                            title="4 stars"></label>
+                        <input type="radio" id="star3" name="rating" value="3" /><label for="star3"
+                            title="3 stars"></label>
+                        <input type="radio" id="star2" name="rating" value="2" /><label for="star2"
+                            title="2 stars"></label>
+                        <input type="radio" id="star1" name="rating" value="1" /><label for="star1"
+                            title="1 star"></label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="review">Tell us more</label>
+                    <textarea id="review" name="review" placeholder="What did you like? What can we do better?"
+                        required></textarea>
+                </div>
+
+                <button type="submit" id="submitBtn">
+                    <span class="btn-text">Submit Feedback</span>
+                    <div class="loader hidden"></div>
+                </button>
+            </form>
+
+            <div id="responseArea" class="response-area hidden">
+                <h3>Thank You!</h3>
+                <p id="responseText"></p>
+                <button id="closeResponse">Submit Another</button>
+            </div>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>
